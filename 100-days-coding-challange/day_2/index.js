@@ -36,3 +36,30 @@ var convert = function (s, numRows) {
   answer = matrix.map((row) => row.join("")).join("");
   return answer.replaceAll(" ", "");
 };
+
+// Leetcode 50. Pow(x,y)
+
+/**
+ * @param {number} x
+ * @param {number} n
+ * @return {number}
+ */
+
+var myPow = function (x, n) {
+  if (n === 0) return 1;
+
+  let power = Math.abs(n);
+
+  let res =
+    power % 2 === 0
+      ? myPow(x * x, power / 2)
+      : myPow(x * x, (power - 1) / 2) * x;
+
+  return n < 0 ? 1 / res : res;
+};
+
+let first = myPow("2.00000", 10),
+  second = myPow("2.10000", 3),
+  third = myPow("2.00000", -2);
+
+console.log(first);
