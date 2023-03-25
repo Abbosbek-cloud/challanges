@@ -26,9 +26,8 @@ var merge = function (nums1, m, nums2, n) {
  * @param {string} s
  * @return {boolean}
  */
+
 var isPalindrome = function (s) {
   let result = s.replace(/[^a-z0-9]/gi, "").toLowerCase();
   return result.split("").reverse().join("") === result ? true : false;
 };
-
-console.log(isPalindrome("0P"));
