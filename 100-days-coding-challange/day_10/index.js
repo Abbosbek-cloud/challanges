@@ -46,4 +46,3 @@ function merge(hash1, hash2) {
     }
   }
 }
-console.log(commonChars(["bella", "label", "roller"]));
