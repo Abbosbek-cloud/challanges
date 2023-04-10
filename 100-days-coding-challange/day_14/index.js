@@ -18,5 +18,3 @@ var partitionString = function (s) {
   }
   return count;
 };
-
-console.log(partitionString("abababfjefeb"));

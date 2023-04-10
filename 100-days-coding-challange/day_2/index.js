@@ -57,9 +57,3 @@ var myPow = function (x, n) {
 
   return n < 0 ? 1 / res : res;
 };
-
-let first = myPow("2.00000", 10),
-  second = myPow("2.10000", 3),
-  third = myPow("2.00000", -2);
-
-console.log(first);

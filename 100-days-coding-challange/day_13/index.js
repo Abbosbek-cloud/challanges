@@ -12,11 +12,8 @@ var numRescueBoats = function (people, limit) {
     heaviestPeople = people.length - 1,
     result = 0;
 
-  console.log(heaviestPeople, "ogir");
-
   while (lightPeople <= heaviestPeople) {
     result += 1;
-    console.log(result, "res");
     if (people[lightPeople] + people[heaviestPeople] <= limit) {
       lightPeople += 1;
     }
@@ -25,8 +22,3 @@ var numRescueBoats = function (people, limit) {
 
   return result;
 };
-
-console.log(numRescueBoats([3, 2, 2, 1], 3));
-
-// Algorithm
-//

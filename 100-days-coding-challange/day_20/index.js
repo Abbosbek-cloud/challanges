@@ -34,8 +34,5 @@ var differenceOfSum = function (nums) {
     .split("")
     .reduce((a, b) => Number(a) + Number(b), 0);
   let response = Math.abs(sum - digitSum);
-  console.log(nums.join("").split(""));
   return response;
 };
-
-console.log(differenceOfSum([1, 15, 6, 3]));
