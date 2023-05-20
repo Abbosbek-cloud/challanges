@@ -7,6 +7,7 @@
  */
 
 var findPoisonedDuration = function (timeSeries, duration) {
+  let start = new Date();
   const length = timeSeries.length;
   let sum = 0;
   for (let index = 1; index < length; index++) {
@@ -17,5 +18,7 @@ var findPoisonedDuration = function (timeSeries, duration) {
     }
   }
   sum += duration;
+  let end = new Date();
+  console.log("ends in", end - start);
   return sum;
 };
