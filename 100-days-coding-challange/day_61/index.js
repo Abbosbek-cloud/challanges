@@ -1,5 +1,3 @@
-// LeetCode 108. Convert Sorted Array to Binary Search Tree
-
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -8,26 +6,16 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
-
 /**
  * @param {number[]} nums
  * @return {TreeNode}
  */
 
-var sortedArrayToBST = function (nums) {
-  let h = getHalf(nums);
-  let root = new TreeNode(nums[h]);
-  let left = split(nums, 0, h);
-  let right = split(nums, h + 1, nums.length);
-
-  return build(nums, root, left, right);
+var split = function (nums, l, r) {
+  return nums.slice(l, r);
 };
 
-function split(nums, left, right) {
-  return nums.slice(left.right);
-}
-
-function build(nums, root, left, right) {
+var build = function (nums, root, left, right) {
   if (left.length == 0 && right.length == 0) return root;
   let rooti = nums.indexOf(root.val);
 
@@ -51,8 +39,17 @@ function build(nums, root, left, right) {
   }
 
   return root;
-}
+};
 
-function getHalf(arr) {
+var getHalfI = function (arr) {
   return Math.floor(arr.length / 2);
-}
+};
+
+var sortedArrayToBST = function (nums) {
+  let h = getHalfI(nums);
+  let root = new TreeNode(nums[h]);
+  let left = split(nums, 0, h);
+  let right = split(nums, h + 1, nums.length);
+
+  return build(nums, root, left, right);
+};
