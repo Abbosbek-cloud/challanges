@@ -15,7 +15,7 @@
  */
 
 var sortedArrayToBST = function (nums) {
-  let h = getHalfI(nums);
+  let h = getHalf(nums);
   let root = new TreeNode(nums[h]);
   let left = split(nums, 0, h);
   let right = split(nums, h + 1, nums.length);
