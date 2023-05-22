@@ -65,21 +65,19 @@ var fourSum = function (nums, target) {
 ```
 
 ```
-approach: Two Pointer
-it's a array problem.
+Approach: Two Pointer
+It's an array problem.
 
-since solving 2Sum, 3Sum, now tackling 4Sum, I'm convinced, # could only go up,
-so it's more like a generic 'KSum' problem.
-we can use loop like we did for 3Sum, where we will have 1 extra loop, before we hit while loop,
+Since solving 2Sum, 3Sum, now tackling 4Sum, I'm convinced, could only go up, so it's more like a generic 'KSum' problem.
+We can use loop like we did for 3Sum, where we will have 1 extra loop, before we hit while loop,
 same for 5Sum, where we will have 3 for loop, before we hit the while loop,
 same goes for increasing number, the for loop, will only increase before we hit the while loop,
 so to avoid having large number of for loop to tackle this K Sum problem,
-...I'm implementing a generalized solution, that could work with any number using backtracking
-backtracking technique I use is:
-loop(usually), choose(pushing a value in a storage/container), explore(recursive call), unchoose(removing the lates value previouslypushed in, from the container)
+I'm implementing a generalized solution, that could work with any number using backtracking.
+Backtracking technique I use is: loop(usually), choose(pushing a value in a storage/container), 
+explore(recursive call), unchoose(removing the lates value previouslypushed in, from the container)
 
-we want to sort the array, as we can avoid duplicates in a efficient manner,
+We want to sort the array, as we can avoid duplicates in an efficient manner,
 then we will recurse through the array elements, until we have 2 element
 once we got 2 element, we can basically, send that 2 element for while loop (similar to 2Sum problem)
-
 ```
