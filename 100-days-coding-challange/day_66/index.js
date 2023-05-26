@@ -5,6 +5,7 @@
  * @param {number} n
  * @return {boolean}
  */
+
 var canPlaceFlowers = function (flowerbed, n) {
   for (let i = 0; i < flowerbed.length && n !== 0; i++) {
     if (
