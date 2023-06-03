@@ -1,3 +1,5 @@
+// LeetCode 839. Similar String Groups
+
 /**
  * @param {string[]} strs
  * @return {number}
