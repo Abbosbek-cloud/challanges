@@ -4,6 +4,7 @@
  * @param {string[]} operations
  * @return {number}
  */
+
 var calPoints = function (ops) {
   let stack = [];
   for (let i = 0; i < ops.length; i++) {
