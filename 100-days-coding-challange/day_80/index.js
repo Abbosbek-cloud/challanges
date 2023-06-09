@@ -7,8 +7,8 @@
  */
 
 var nextGreatestLetter = function (letters, target) {
-  const firstLetter = letters[0];
-  const charCode = target.charCodeAt(0);
+  const firstLetter = letters[0],
+    charCode = target.charCodeAt(0);
 
   letters.sort();
 
